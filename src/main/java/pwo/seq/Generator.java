@@ -9,6 +9,10 @@ import pwo.utils.SequenceGenerator;
 
 import pwo.utils.SequenceGenerator;
 
+/**
+ * Klasa abstrakcyjna implementująca interfejs {@link pwo.utils.SequenceGenerator}.
+ * @author eliza
+ */
 
 abstract public class Generator implements SequenceGenerator {
 

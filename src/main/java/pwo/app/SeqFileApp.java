@@ -9,6 +9,10 @@ import pwo.seq.SeqType;
 import pwo.utils.SequenceTools;
 import java.nio.file.Paths;
 import java.nio.file.InvalidPathException;
+/**
+ * Klasa powodująca obliczenie danego ciągu oraz wypisanie wyniku pliku tekstowym
+ * @author eliza
+ */
 
 class SeqToFileApp {
 
@@ -16,6 +20,11 @@ class SeqToFileApp {
     protected Integer from = null, to = null;
     protected String fileName = null;
 
+     /**
+     * Metoda przyjmująca argumenty
+     * @param args
+     * @return
+     */
     protected boolean getArgs(String[] args) {
         try {
             seqType = SeqType.fromString(args[0]);
@@ -34,11 +43,21 @@ class SeqToFileApp {
         return seqType != null && from >= 0 && to >= 0;
     }
 
+    
+    
+     /**
+     * Wyliczenie określonych wyrazów danego ciągu
+     * @return
+     */
     protected boolean wirteSeq() {
         return SequenceTools.writeToFile(seqType.getGenerator(),
                 from, to, fileName);
     }
 
+    /**
+     * Metoda powodująca start wyliczania danego ciągu
+     * @param args
+     */
     public void run(String[] args) {
         System.out.println("Sequence to file CLI app");
         if (!getArgs(args)) {

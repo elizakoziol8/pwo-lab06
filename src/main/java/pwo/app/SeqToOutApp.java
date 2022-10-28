@@ -7,11 +7,16 @@ package pwo.app;
 import pwo.utils.SequenceTools;
 
 /**
- *
- * @author student
+ * Klasa powodująca obliczenie danego ciągu oraz wypisanie wyniku w CLI
+ * @author eliza
  */
 public class SeqToOutApp extends SeqToFileApp {
 
+    /**
+     * Metoda przyjmująca argumenty
+     * @param args
+     * @return
+     */
     @Override
     protected boolean getArgs(String[] args) {
 
@@ -21,6 +26,10 @@ public class SeqToOutApp extends SeqToFileApp {
 
         return seqType != null && from >= 0 && to >= 0;
     }
+     /**
+     * Wyliczenie określonych wyrazów danego ciągu
+     * @return
+     */
 
     @Override
     protected boolean wirteSeq() {
@@ -31,6 +40,10 @@ public class SeqToOutApp extends SeqToFileApp {
         return true;
     }
 
+     /**
+     * Metoda powodująca start wyliczania danego ciągu
+     * @param args
+     */
     @Override
     public void run(String[] args) {
 

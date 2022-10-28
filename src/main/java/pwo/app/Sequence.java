@@ -3,8 +3,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package pwo.app;
+
+/**
+ * Główna klasa uruchomieniowa
+ * @author eliza
+ */
 public class Sequence {
 
+     /**
+     * Metoda uruchomieniowa <b>main</b>
+     * @param args
+     */
  public static void main(String[] args) {
 
  switch(args.length){
